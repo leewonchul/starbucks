@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 50px;
+    }
+    .container{
+      /* 실제 크기와 같이 크기를 줘야지 효과가 최대화 된다. */
+      width: 100px;
+      height: 100px;
+
+      background-color: blue;
+      /* chap 6 속성에있음 
+      3차원 으로 할때는 꼭 필요함*/
+      perspective: 600px;
+    }
+    .container .item {
+      width: 100px;
+      height: 100px;
+      border: 4px solid red;
+      box-sizing: border-box;
+      font-size: 60px;
+      /* 뒷면은 숨김효과를 준다. */
+      backface-visibility: hidden;
+      /* 자연스럽게 1초를 주겠다. */
+      transition: 1s;
+    }
+
+    .container .item.front {
+      /* 부모인지 물어봐서 body가 부모로 보게 하기 위하여 뛰운다
+         그러면 뒤의 모양이 위로 올라옴 
+         안쓰게 되면 앞 뒤로 표시 */
+      position: absolute;
+      /* 처음에 0도에 있게 하라 */
+      transform: rotateY(0deg);
+    }
+    .container:hover .item.front {
+      /* 부모인지 물어봐서 body가 부모로 보게 하기 위하여 뛰운다
+         그러면 뒤의 모양이 위로 올라옴 
+         안쓰게 되면 앞 뒤로 표시 */
+      transform: rotateY(180deg);
+    }
+
+    .container .item.back {
+      transform: rotateY(-180deg);
+    }
+
+    .container:hover .item.back {
+      transform: rotateY(0deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item front">앞</div>
+    <div class="item back">뒤</div>
+  </div>
+
+</body>
+
+</html>
