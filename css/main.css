@@ -26,7 +26,7 @@ a {
   margin: 0 auto;
   position: relative;
 }
-
+/* 기본에서 바뀌는 부분이 있으면 가꾸어서 사용, 먼저 주고 나서 나중에 오는것은 바뀔수 있다. */
 .btn {
   width: 130px;
   padding: 10px;
@@ -1150,9 +1150,13 @@ footer .logo{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 부모를 기준으로 두겠다. */
   position: fixed;
+  /* 아래에서 30px 위로 */
   bottom: 30px;
+  /* 오른쪽에서 30px 왼쪽으로 */
   right: 30px;
+  /* 다른 그림보다 위에 적용할수 있도록 우선순위를 줬다. */
   z-index: 9;
 }
 

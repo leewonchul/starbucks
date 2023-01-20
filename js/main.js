@@ -27,25 +27,29 @@ window.addEventListener('scroll', _.throttle(function(){
   // window.scrollY : 스크롤이 화면의 몇 픽셀지점에 있는지 수치로 알려줌
   // 페이지 스크롤 위치가 500px를 넘으면
   if(window.scrollY>500){
-    //배지 숨기기
+    //뱃지 숨기기
     // gsap.to(요소, 지속시간, 옵션)
     gsap.to(badgeEl, .6, {
       opacity: 0,
+      // 눌러지지 않게
       display: 'none'
     });
     // to-top button 보이기
     gsap.to(toTopEl, .2, {
+      // 현재 본인의 위치값을 기준으로 한다.
       x:0
     })
   }else{
-    //배지 보이기  
+    //뱃지 보이기  
     gsap.to(badgeEl, .6, {
       opacity: 1,
+      // 눌러지게 되다.
       display : 'block'
     });
     // to-top button 숨기기
     gsap.to(toTopEl, .2, {
       // 버튼이X축으로 숨겨질 수 있도록 이동값을 추가
+      // 현재 본인의 위치값을 기준으로 한다.
       x:100
     })
   }
@@ -152,4 +156,4 @@ spyEls.forEach(function(spyEl){
 
 // 올해가 몇년도인지 계산
 const thisYear = document.querySelector('.this-year')
-thisYear.textContent = new Date().getFullYear()
+thisYear.textContent = new Date().getFullYear
