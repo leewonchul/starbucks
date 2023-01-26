@@ -7,3 +7,5 @@
 [main 브랜치로 이동]https://github.com/leewonchul/starbucks/tree/main
 
 [signin 브랜치로 이동]https://github.com/leewonchul/starbucks/tree/signin
+
+[DEMO 스타벅스 페이지 미리보기](https://leafy-naiad-912734.netlify.app)
