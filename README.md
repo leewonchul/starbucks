@@ -1,4 +1,4 @@
-# Starbucks
+# StarBucks
 
 스타벅스 랜딩 페이지(홈페이지)를 만든 예제입니다.
 
@@ -7,5 +7,3 @@
 [main 브랜치로 이동]https://github.com/leewonchul/starbucks/tree/main
 
 [signin 브랜치로 이동]https://github.com/leewonchul/starbucks/tree/signin
-
-
